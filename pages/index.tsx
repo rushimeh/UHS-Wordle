@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import GameBoard from "../components/GameBoard";
+import Key from "../components/Key";
+import Keyboard from "../components/Keyboard";
+
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export default function Home() {
+  const [guess, setGuess] = useState();
+
   return (
     <>
       <Head>
@@ -10,7 +18,11 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>wordle</main>
+      <GameBoard />
+
+      <Keyboard setGuess={setGuess} />
+
+      <div>Guess: {guess}</div>
     </>
   );
 }
