@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Key.js", "pages/index.tsx", "components/Keyboard.tsxs", "components/GameBoard.tsx", "components/Keys.js"],
   "exclude": ["node_modules"]
 }
