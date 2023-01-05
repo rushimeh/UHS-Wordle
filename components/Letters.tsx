@@ -1,3 +1,4 @@
+
 import React, {useContext, useEffect}  from "react";
 import { AppContext } from "../pages/index";
 import { AppContext as ContextType } from "../lib/componentprops";
@@ -31,6 +32,7 @@ function Key({letterPos, attemptVal}: {letterPos: number; attemptVal: number}){
 
     return(
         <div className="letter" id ={letterState}>{key}</div>
+
     )
 }
 

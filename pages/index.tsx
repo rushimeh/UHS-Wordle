@@ -12,6 +12,7 @@ import { AppContext as ContextType } from "../lib/componentprops";
 export const AppContext = createContext<any>({
   
   board: boardDefault,
+
   setBoard: () => null, 
   setCurrAttempt: () => null, 
   onSelectLetter: (keyVal: string) => null,
@@ -22,12 +23,14 @@ export const AppContext = createContext<any>({
   setDisabledLetter: () => null,
 })
 
+
 function Home() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
   const correctWord = "KLINE";
   const [gameOver, setGameOver] = useState({gameOver: false, guessedWord: false});
   const [disabledLetters, setDisabledLetter] = useState([]);
+
 
   const onSelectLetter = (keyVal: string) => {
     if(currAttempt.letterPos > 4) return;
@@ -67,6 +70,7 @@ function Home() {
     if(currAttempt.attempt === 5){
       setGameOver({gameOver: true, guessedWord: false})
     }
+
   }
   return (
     <>
@@ -83,6 +87,7 @@ function Home() {
         {gameOver.gameOver ? <GameOver/> : <Keyboard />}
       </div>
     </AppContext.Provider>
+
 
     </>
   );

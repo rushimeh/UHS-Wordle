@@ -3,7 +3,9 @@ import { AppContext } from "../pages/index";
 import { AppContext as ContextType } from "../lib/componentprops";
 import App from '../pages/_app';
 
+
 function Key ( {keyVal, bigKey, disabled}: {keyVal: string; bigKey: boolean; disabled: boolean} ) {
+
   const { onSelectLetter, onDelete, onEnter} =  useContext<ContextType>(AppContext)
   const selectLetter = () => {
     if(keyVal === "ENTER"){
@@ -28,6 +30,7 @@ function Key ( {keyVal, bigKey, disabled}: {keyVal: string; bigKey: boolean; dis
 
   return (
     <div className='key' id={tempId()} onClick={selectLetter}>{keyVal}</div>
+
   )
 }
 
