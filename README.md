@@ -1,4 +1,4 @@
-### THIS IS OUR HOLIDAY WORDLE FOR UNIONVILLE HIGH SCHOOL 
+### HOLIDAY WORDLE FOR UNIONVILLE HIGH SCHOOL 
 
 We build this using typescript and react and next.js
 
